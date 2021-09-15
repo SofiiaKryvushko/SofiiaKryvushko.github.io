@@ -11,19 +11,19 @@ let menu = prompt('1 - name defined, age>18\n' +
 switch (menu) {
 
     case'1':
-        alert((name === 'undefined') && (age > 18));//+
+        alert((age > 18) && (!!(name ?? undefined)));
         break;
     case'2':
         alert((role === 'Admin' || role === 'admin') || (occupation === 'CEO' || occupation === 'ceo'));
-        break;//+
+        break;
     case'3':
-        alert(occupation ?? undefined ? occupation: role);//+
+        alert(occupation ?? undefined ? occupation: role);
         break;
     case'4':
-        alert((((name ?? undefined) && (age > 18)) || (role === 'admin' || role === 'Admin')));
+        alert((((name && 'undefined') && (age > 18)) || (role === 'admin' || role === 'Admin')));
         break;
     case'5':
-        alert(((role !== 'admin') && (name ?? 'undefined')) ? age : false);
+        alert(((role !== 'admin') && (name && 'undefined')) ? age : false);
         break;
     default:
         break;
