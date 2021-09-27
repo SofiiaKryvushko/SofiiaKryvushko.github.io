@@ -4,7 +4,7 @@ const password = 'admin';
 let question;
 if (userLogin === login) {
     let userPassword = prompt("Enter password ");
-    while (userPassword !== password || question === 'yes') {
+    do {
         if (userPassword === password) {
             console.log("Welcome!");
             break;
@@ -17,7 +17,7 @@ if (userLogin === login) {
                 break;
             }
         }
-    }
+    } while (question === 'yes' || userPassword !== password);
 } else {
     console.log("Wrong Login");
 }
