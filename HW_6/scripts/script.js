@@ -3,25 +3,21 @@ const login = 'admin';
 const password = 'admin';
 let question;
 if (userLogin === login) {
-const userPassword = prompt("Enter password ");
-do{
-    if (userPassword === password) {
-        console.log("Welcome!");
-    }
-    else {
-  console.log("Wrong password!!!");
-try{
-        question = prompt("Try one more time?");
-        if (question === 'yes') {
-            userPassword = prompt("Enter password ");
-        }
-        else {
+    let userPassword = prompt("Enter password ");
+    while (userPassword !== password || question === 'yes') {
+        if (userPassword === password) {
+            console.log("Welcome!");
+            break;
+        } else {
             console.log("Wrong password!!!");
+            question = prompt("Try one more time?");
+            if (question === 'yes') {
+                userPassword = prompt("Enter password ");
+            } else if (question === 'no') {
+                break;
+            }
         }
-    }catch(err){}
     }
-}while(userPassword !== password && question === 'yes');
-}
-else{
-console.log("Wrong Login");
+} else {
+    console.log("Wrong Login");
 }
