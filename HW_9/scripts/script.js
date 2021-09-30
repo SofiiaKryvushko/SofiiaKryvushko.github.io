@@ -17,34 +17,35 @@ function guessNum(onCorrectAnswer, onSmallAnswer, onBigAnswer) {
 }
 
 function tryAgain() {
-    if (again) {
+    
         hiddenNumber = getRandomNum(1, 100);
-        console.log(hiddenNumber);
+        alert(hiddenNumber);
         userNumber = prompt("Enter your number to guess");
         return again;
-    } else {
-        return again = null;
-    }
 }
 
 let hiddenNumber = getRandomNum(1, 100);
-console.log(hiddenNumber);
+alert(hiddenNumber);
 let userNumber = prompt("Enter your number to guess");
 let again;
 
 do {
     guessNum(
         function () {
-            console.log("You win!!!");
+            alert("You win!!!");
             again = confirm("Try one more time?");
+            if(again){
             tryAgain();
+            } else {
+                again = null;
+            }
         },
         function () {
-            console.log('small');
+            alert('small');
             userNumber = prompt("Enter your number to guess");
         },
         function () {
-            console.log('big');
+            alert('big');
             userNumber = prompt("Enter your number to guess");
         },
     );
