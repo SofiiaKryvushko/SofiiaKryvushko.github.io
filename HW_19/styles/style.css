@@ -1,0 +1,37 @@
+.input-wrapper{
+    max-width: 400px;
+    background-color: bisque;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.input__field{
+    border-radius: 4px;
+    padding: 10px;
+    border-style: none;
+    margin-right: 20px;
+}
+
+.list{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.list__item{
+    padding-left: 10px;
+    line-height: 150%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: darkseagreen;
+    font-weight: 900;
+    color: #fff;
+}
