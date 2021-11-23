@@ -1,0 +1,12 @@
+
+#mins,
+#sec{
+    
+    width: 140px;
+}
+
+#mins:invalid,
+#sec:invalid{
+    background-color: red;
+}
+
