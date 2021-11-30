@@ -10,13 +10,9 @@ console.log(string);
 console.log(string.reverse());
 
 //2
-function sort(arr) {
-   return Array.prototype.sort = Array.prototype.slice.call(arr).sort();
+Array.prototype.sort = function(func) {
+    return [...this].sort(func);
 }
-
-let array = ['hello', 'alla', 'brown'];
-console.log(sort(array));
-console.log(array);
 
 //3
 NodeList.prototype.map = Array.prototype.map;
