@@ -10,8 +10,10 @@ console.log(string);
 console.log(string.reverse());
 
 //2
-Array.prototype.sort = function(func) {
-    return [...this].sort(func);
+Array.prototype.sorted = Array.prototype.sort;
+
+Array.prototype.sort = function (func) {
+    return [...this].sorted(func);
 }
 
 //3
